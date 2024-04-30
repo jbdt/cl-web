@@ -18,8 +18,8 @@ Table Of Contents:
 09. Details 2
 10. Testimonials
 11. Call Me
-12. Projects
-13. Project Lightboxes
+12. Tours
+13. Tours Lightboxes
 14. Team
 15. About
 16. Contact
@@ -975,7 +975,7 @@ input[type='checkbox'] {
 /*************************/
 .accordion .area-1 {
 	height: 27rem;
-	background: url('../images/details-1-background.jpg') center center no-repeat;
+	background: url('../images/details-1-background.png') center center no-repeat;
 	background-size: cover;
 }
 
@@ -1165,7 +1165,7 @@ input[type='checkbox'] {
 
 .tabs .area-2 {
 	height: 27rem;
-	background: url('../images/details-2-background.jpg') center center no-repeat;
+	background: url('../images/details-2-background.png') center center no-repeat;
 	background-size: cover;
 }
 
@@ -1309,7 +1309,7 @@ input[type='checkbox'] {
 
 
 /************************/
-/*     12. Projects     */
+/*     12. Tours     */
 /************************/
 .filter {
 	padding-top: 6.5rem;
@@ -1409,7 +1409,7 @@ input[type='checkbox'] {
 
 
 /**********************************/
-/*     13. Project Lightboxes     */
+/*     13. Tours Lightboxes     */
 /**********************************/
 .lightbox-basic {
 	position: relative;
@@ -1972,7 +1972,7 @@ a:hover.back-to-top {
 	/* end of testimonials */
 
 
-	/* Projects */
+	/* Tours */
 	.filter .element-item { 
 		width: 25%; 
 	}
@@ -1985,7 +1985,7 @@ a:hover.back-to-top {
 	.filter .element-item:hover .element-item-overlay {
 		opacity: 1;
 	}
-	/* end of projects */
+	/* end of tours */
 
 
 	/* About */
@@ -2196,7 +2196,7 @@ a:hover.back-to-top {
 	/* end of call me */
 
 
-	/* Project Lightboxes */
+	/* Tour Lightboxes */
 	.lightbox-basic img {
 		margin-bottom: 0;
 	}
@@ -2209,7 +2209,7 @@ a:hover.back-to-top {
 	.lightbox-basic .btn-outline-reg {
 		margin-bottom: 0;
 	}
-	/* end of project lightboxes */
+	/* end of tour lightboxes */
 
 
 	/* Team */
@@ -2357,16 +2357,18 @@ a:hover.back-to-top {
 	/* end of call me */
 
 
-	/* Projects */
+	/* Tours */
+	/* Original-> width: 17.3125rem; */
+	/* Original-> height: 16.875rem; */
 	.filter .element-item {
-		width: 17.3125rem; /* to eliminate grid overflow problem on hard refresh */
-		height: 16.875rem;
+		width: 11.541rem; /* to eliminate grid overflow problem on hard refresh */
+		height: 11.25rem;
 	}
 
 	.filter .element-item .element-item-overlay span { 
 		top: 45%;
 	}
-	/* end of projects */
+	/* end of tours */
 
 
 	/* Team */
