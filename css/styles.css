@@ -34,7 +34,7 @@ Table Of Contents:
 Colors:
 
 - Backgrounds - light gray #fbfbfb
-- Background - dark blue #2b4f60
+- Background - dark blue #1d516a
 - Backgrounds navbar, footer - dark gray #1d516a
 - Buttons, bullets, icons - green #e56a6c
 - Headings text - black #484a46
@@ -1246,7 +1246,7 @@ input[type='checkbox'] {
 .form-1 {
 	padding-top: 6.625rem;	
 	padding-bottom: 5.625rem;	
-	background-color: #2b4f60;
+	background-color: #1d516a;
 }
 
 .form-1 .text-container {
@@ -1780,7 +1780,7 @@ a:hover.back-to-top {
 .ex-header {
 	padding-top: 8rem;
 	padding-bottom: 5rem;
-	background-color: #2b4f60;
+	background-color: #1d516a;
 	text-align: center;
 }
 
