@@ -170,7 +170,7 @@
 
 
     /* Call Me Form */
-    $("#callMeForm").validator().on("submit", function(event) {
+    $("#customizedTourForm").validator().on("submit", function(event) {
     	if (event.isDefaultPrevented()) {
             // handle the invalid form...
             lformError();
@@ -192,7 +192,7 @@
         
         $.ajax({
             type: "POST",
-            url: "php/callmeform-process.php",
+            url: "php/customizedTourform-process.php",
             data: "name=" + name + "&phone=" + phone + "&email=" + email + "&select=" + select + "&terms=" + terms, 
             success: function(text) {
                 if (text == "success") {
@@ -206,13 +206,13 @@
 	}
 
     function lformSuccess() {
-        $("#callMeForm")[0].reset();
+        $("#customizedTourForm")[0].reset();
         lsubmitMSG(true, "Request Submitted!");
         $("input").removeClass('notEmpty'); // resets the field label after submission
     }
 
     function lformError() {
-        $("#callMeForm").removeClass().addClass('shake animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
+        $("#customizedTourForm").removeClass().addClass('shake animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
             $(this).removeClass();
         });
 	}
