@@ -122,6 +122,14 @@
                 <source src="images/header-background.mp4" type="video/mp4">
                 Your browser does not support HTML5 video.
             </video>
+            <script>
+                document.body.addEventListener('click', function() {
+                    var video = document.querySelector('.video-background');
+                    if (video.paused) {
+                        video.play();
+                    }
+                });
+            </script>
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
