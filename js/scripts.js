@@ -177,8 +177,9 @@
             lsubmitMSG(false, "Please fill all fields!");
         } else {
             // everything looks good!
-            event.preventDefault();
-            lsubmitForm();
+            // event.preventDefault();
+            // lsubmitForm();
+            console.log('dale!');
         }
     });
 
