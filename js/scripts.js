@@ -169,7 +169,7 @@
     });
 
 
-    /* Call Me Form */
+    /* Customized Tour Form */
     $("#customizedTourForm").validator().on("submit", function(event) {
     	if (event.isDefaultPrevented()) {
             // handle the invalid form...
@@ -184,16 +184,25 @@
 
     function lsubmitForm() {
         // initiate variables with form content
-		var name = $("#lname").val();
+        var name = $("#lname").val();
+		var nationality = $("#lnationality").val();
 		var phone = $("#lphone").val();
-		var email = $("#lemail").val();
+        var email = $("#lemail").val();
+        var kindTrip = $("#lkind-trip").val();
+        var howLong = $("#lhow-long").val();
+        var arrival = $("#larrival").val();
+        var budget = $("#lbudget").val();
+        var adults = $("#ladults").val();
+		var children = $("#lchildren").val();
+
+
 		var select = $("#lselect").val();
         var terms = $("#lterms").val();
         
         $.ajax({
             type: "POST",
-            url: "php/customizedTourform-process.php",
-            data: "name=" + name + "&phone=" + phone + "&email=" + email + "&select=" + select + "&terms=" + terms, 
+            url: "https://formsubmit.co/customized.tour@lotuscharmtravel.com",
+            data: "name=" + name + "nationality=" + nationality + "&phone=" + phone + "&email=" + email + "&kindTrip=" + kindTrip + "&howLong=" + howLong + "&arrival=" + arrival + "&budget=" + budget + "&adults=" + adults + "&children=" + children, 
             success: function(text) {
                 if (text == "success") {
                     lformSuccess();
