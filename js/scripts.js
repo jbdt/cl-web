@@ -178,13 +178,17 @@
             lsubmitMSG(false, "Please fill all fields!");
         } else {
             // everything looks good!
-            // event.preventDefault();
-            // lsubmitForm();
-            console.log('dale!');
+            event.preventDefault();
+            lsubmitForm();
         }
     });
 
     function lsubmitForm() {
+        var form = document.getElementById("customizedTourForm"); 
+        var submitButton = form.querySelector(".form-control-submit-button");
+        submitButton.disabled = true;
+        document.getElementById("submitSpinnerTour").style.visibility = "visible";
+
         // initiate variables with form content
         var name = $("#lname").val();
 		var nationality = $("#lnationality").val();
@@ -203,10 +207,12 @@
         
         $.ajax({
             type: "POST",
-            url: "https://formsubmit.co/005ecac5b958b6f38d0f1cfb97ebe310",
-            data: "name=" + name + "&nationality=" + nationality + "&phone=" + phone + "&email=" + email + "&kindTrip=" + kindTrip + "&howLong=" + howLong + "&arrival=" + arrival + "&budget=" + budget + "&adults=" + adults + "&children=" + children, 
+            url: "https://script.google.com/macros/s/AKfycby7iahDkJ-OCzDAL4byKJSn75ZZHjwhy9pnHJzwkAUtiAU6x58WaIs8-iLv1XG0Y0OYRw/exec",
+            data: "Name=" + name + "&Nationality=" + nationality + "&Phone=" + phone + "&Email=" + email + "&KindTrip=" + kindTrip + "&HowLong=" + howLong + "&Arrival=" + arrival + "&Budget=" + budget + "&Adults=" + adults + "&Children=" + children, 
             success: function(text) {
-                if (text == "success") {
+                submitButton.disabled = false;
+                document.getElementById("submitSpinnerTour").style.visibility = "hidden";
+                if (text['result'] == "success") {
                     lformSuccess();
                 } else {
                     lformError();
@@ -252,17 +258,23 @@
     });
 
     function csubmitForm() {
+        var form = document.getElementById("contactForm"); 
+        var submitButton = form.querySelector(".form-control-submit-button");
+        submitButton.disabled = true;
+        document.getElementById("submitSpinnerContact").style.visibility = "visible";
         // initiate variables with form content
 		var name = $("#cname").val();
 		var email = $("#cemail").val();
+        var phone = $("#cphone").val();
         var message = $("#cmessage").val();
-        var terms = $("#cterms").val();
         $.ajax({
             type: "POST",
-            url: "php/contactform-process.php",
-            data: "name=" + name + "&email=" + email + "&message=" + message + "&terms=" + terms, 
+            url: "https://script.google.com/macros/s/AKfycbxDdnh94gpQGBYZxRnb70YtgmMixVODz8KH325OtBigaFvP753dKgngTbPE_jaXkZ92/exec",
+            data: "Name=" + name + "&Email=" + email + "&Phone=" + phone + "&Message=" + message, 
             success: function(text) {
-                if (text == "success") {
+                submitButton.disabled = false;
+                document.getElementById("submitSpinnerContact").style.visibility = "hidden";
+                if (text['result'] == "success") {
                     cformSuccess();
                 } else {
                     cformError();
