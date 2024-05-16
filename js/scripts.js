@@ -204,7 +204,7 @@
         $.ajax({
             type: "POST",
             url: "https://formsubmit.co/005ecac5b958b6f38d0f1cfb97ebe310",
-            data: "name=" + name + "nationality=" + nationality + "&phone=" + phone + "&email=" + email + "&kindTrip=" + kindTrip + "&howLong=" + howLong + "&arrival=" + arrival + "&budget=" + budget + "&adults=" + adults + "&children=" + children, 
+            data: "name=" + name + "&nationality=" + nationality + "&phone=" + phone + "&email=" + email + "&kindTrip=" + kindTrip + "&howLong=" + howLong + "&arrival=" + arrival + "&budget=" + budget + "&adults=" + adults + "&children=" + children, 
             success: function(text) {
                 if (text == "success") {
                     lformSuccess();
